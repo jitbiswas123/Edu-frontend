@@ -210,20 +210,6 @@ npm run build
 
 ---
 
-# 📌 GitHub Upload Notes
-
-❌ Do NOT commit:
-- `.env` files
-- `node_modules/`
-- Generated frontend builds (unless required)
-- Uploaded user files inside `backend/uploads/`
-
-✅ Recommended:
-- Add a `.gitignore` file
-- Keep secrets secure
-- Use environment variables properly
-
----
 
 # 🎯 Project Objective
 
