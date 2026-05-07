@@ -230,13 +230,5 @@ Add a license if you plan to make the project public or reusable.
 
 ---
 
-# 👨‍💻 Developed By
-
-- Jit Biswas
-- Divya Prakash Singh
-- Kumar Mangalam
-- Balaji
-
----
 
 ⭐ If you like this project, consider giving it a star on GitHub!
