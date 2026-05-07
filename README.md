@@ -1,70 +1,256 @@
-# Getting Started with Create React App
+# EduVault 🎓
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EduVault is a full-stack Learning Management System (LMS) designed to simplify course management, assignment handling, communication, and academic integrity checks for both teachers and students.
 
-## Available Scripts
+The platform combines a modern React frontend with a powerful Node.js + Express backend and MongoDB database to deliver a seamless educational experience.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🔐 Authentication & Profile Management
+- Student & Teacher Signup/Login
+- Google Authentication
+- JWT-based Authentication
+- Password Reset System
+- Profile Photo Upload
+- Account Settings Management
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📚 Courses & Enrollment
+- Teacher Course Creation & Management
+- Student Course Browsing
+- Enrollment Requests
+- Enrollment Approval/Rejection
+- Course Analytics Dashboard
 
-### `npm test`
+### 📝 Assignments & Submissions
+- Assignment Creation, Update & Deletion
+- File Upload Submission Support
+- Submission History
+- Teacher Review Workflow
+- Assignment Analytics
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🧠 Detection Tools
+- AI-Generated Content Detection
+- Plagiarism Checking
+- Text Analysis Utilities
 
-### `npm run build`
+### 💬 Chat & Notifications
+- Real-Time Teacher-Student Communication
+- Chat History
+- Notification Delivery
+- Read Status Tracking
+- Notification History
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Category | Technologies |
+|----------|--------------|
+| Frontend | React, React Router, Axios, Framer Motion, React Toastify, Recharts |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| Authentication | JWT, Google Sign-In |
+| File Handling | Multer, Mammoth, pdf-parse |
+| Notifications & Email | Nodemailer |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 📁 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+capstoneProject_final/
+├── backend/
+│   ├── server.js
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── uploads/
+│   └── utils/
+│
+└── frontend/
+    ├── src/
+    ├── public/
+    └── build/
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 🌐 Backend API Routes
 
-## Learn More
+```bash
+/api/auth
+/api/courses
+/api/assignments
+/api/submissions
+/api/notifications
+/api/enrollment
+/api/detection
+/api/chat
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✅ Health Check Endpoint:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+/api/health
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# ⚙️ Prerequisites
 
-### Analyzing the Bundle Size
+Make sure you have installed:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Node.js (v18 or later)
+- npm
+- MongoDB Database
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# 🔑 Environment Variables
 
-### Advanced Configuration
+Create a `.env` file inside the `backend/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```env
+PORT=5000
+NODE_ENV=development
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRE=30d
 
-### Deployment
+FRONTEND_URL=http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+GOOGLE_CLIENT_ID=your_google_client_id
 
-### `npm run build` fails to minify
+HUGGINGFACE_API_KEY=your_huggingface_api_key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+SMTP_HOST=your_smtp_host
+SMTP_PORT=587
+SMTP_USER=your_smtp_user
+SMTP_PASS=your_smtp_password
+
+FROM_EMAIL=your_sender_email
+EMAIL_USE_TEACHER_FROM=false
+```
+
+---
+
+# 📦 Installation
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd capstoneProject_final
+```
+
+---
+
+## 2️⃣ Install Backend Dependencies
+
+```bash
+cd backend
+npm install
+```
+
+---
+
+## 3️⃣ Install Frontend Dependencies
+
+```bash
+cd frontend
+npm install
+```
+
+---
+
+# ▶️ Running the Project
+
+## Start Backend Server
+
+```bash
+cd backend
+npm run dev
+```
+
+Backend runs on:
+
+```bash
+http://localhost:5000
+```
+
+---
+
+## Start Frontend Server
+
+```bash
+cd frontend
+npm start
+```
+
+Frontend runs on:
+
+```bash
+http://localhost:3000
+```
+
+---
+
+# 🏗️ Production Build
+
+Build frontend for production:
+
+```bash
+cd frontend
+npm run build
+```
+
+---
+
+# 📌 GitHub Upload Notes
+
+❌ Do NOT commit:
+- `.env` files
+- `node_modules/`
+- Generated frontend builds (unless required)
+- Uploaded user files inside `backend/uploads/`
+
+✅ Recommended:
+- Add a `.gitignore` file
+- Keep secrets secure
+- Use environment variables properly
+
+---
+
+# 🎯 Project Objective
+
+EduVault aims to provide a centralized platform for:
+- Digital learning management
+- Assignment workflow automation
+- Student-teacher communication
+- Academic integrity monitoring
+- Analytics-driven education management
+
+---
+
+# 📄 License
+
+No license has been specified yet.
+
+Add a license if you plan to make the project public or reusable.
+
+---
+
+# 👨‍💻 Developed By
+
+- Jit Biswas
+- Divya Prakash Singh
+- Kumar Mangalam
+- Balaji
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub!
